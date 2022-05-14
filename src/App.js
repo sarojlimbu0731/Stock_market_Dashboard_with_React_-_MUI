@@ -1,16 +1,11 @@
 import './App.css';
 import Layout from './components/Layout';
-import { createTheme } from '@mui/system';
 import { ThemeProvider } from '@mui/styles';
+import { theme } from './theme';
 
-// const theme= createTheme({
-//   zIndex:{
-//     appBar:`1201`
-//   }
-// })
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <Layout/>
     </ThemeProvider>
 

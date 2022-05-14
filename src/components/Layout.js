@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Drawer,List,ListItem, Typography } from '@mui/material';
+import { Box, Button, Container, Drawer,List,ListItem, Typography } from '@mui/material';
 import { TreeView} from '@mui/lab';
 import { TreeItem } from '@mui/lab';
 import { Toolbar } from '@mui/material';
@@ -21,9 +21,6 @@ const useStyles= makeStyles({
     },
     logo:{
         flexGrow:1
-    },
-    demo:{
-        paddingLeft:"2rem"
     }
 })
 
@@ -34,28 +31,27 @@ const Layout = () => {
     const classes=useStyles()
 
   return (
-    <div>
+    <Box>
+
 
     {/* app bar */}
     <Container>
-    <AppBar className={classes.appbar}>
+    <AppBar className={classes.appbar}
+     sx={{
+         backgroundColor:"#16003B",
+         zIndex:1201,
+         paddingTop:"0.5rem"
+        
+     }}
+    >
         <Toolbar>
             <Typography
                 className={classes.logo}
             >
-                .
-            </Typography>
-
-            <NotificationsNoneRoundedIcon/>
-            <Typography>
-                Notification 
-            </Typography>
-
-            <Typography
-                className={classes.demo}
-            >
-                Danson Demo
-            </Typography>
+                LOGO
+            </Typography>  
+            <Button startIcon={<NotificationsNoneRoundedIcon/>} variant='outline'>Notification</Button>
+            <Button variant="outline">Danson Demo</Button>
             
         </Toolbar>
     </AppBar>
@@ -69,7 +65,12 @@ const Layout = () => {
          anchor="left"
         >
             <Toolbar/>
-            <List  className={classes.drawer}>
+     
+            <List  className={classes.drawer}
+                sx={{
+                    marginTop:"2rem"
+                }}
+            >
                 <ListItem>
                     <TreeView>
                         <TreeItem  nodeId='1' label="Dashboard"/>
@@ -140,7 +141,7 @@ const Layout = () => {
             </List>
 
         </Drawer>
-    </div>
+    </Box>
   )
 }
 
