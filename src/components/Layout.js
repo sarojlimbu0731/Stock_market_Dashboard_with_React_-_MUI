@@ -32,8 +32,6 @@ const Layout = () => {
 
   return (
     <Box>
-
-
     {/* app bar */}
     <Container>
     <AppBar className={classes.appbar}
