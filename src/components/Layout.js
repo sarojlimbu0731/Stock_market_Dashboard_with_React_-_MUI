@@ -4,8 +4,11 @@ import { TreeView} from '@mui/lab';
 import { TreeItem } from '@mui/lab';
 import { Toolbar } from '@mui/material';
 import { AppBar } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import NotificationsNoneRoundedIcon from '@mui/icons-material/NotificationsNoneRounded';
 import { makeStyles } from '@mui/styles';
+
 
 const widthList="300px";
 
@@ -75,7 +78,10 @@ const Layout = () => {
                     </TreeView>
                 </ListItem>
                 <ListItem>
-                    <TreeView>
+                    <TreeView
+                          defaultCollapseIcon={<ExpandLessIcon />}
+                          defaultExpandIcon={<ExpandMoreIcon />}   
+                    >
                         <TreeItem  nodeId='2' label="Customer Management">
                             <TreeItem  nodeId='22' label="Customer Profile"/>
                         </TreeItem>
@@ -139,6 +145,7 @@ const Layout = () => {
             </List>
 
         </Drawer>
+       
     </Box>
   )
 }
