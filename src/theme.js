@@ -1,10 +1,10 @@
-import { createTheme } from "@mui/material";
+// import { createTheme } from "@mui/material";
 
-export const theme= createTheme({
-    palatte:{
-        primary:{
-            main:"",
-            primary:""
-        }
-    }
-})
+// export const theme= createTheme({
+//     palatte:{
+//         primary:{
+//             main:"",
+//             primary:""
+//         }
+//     }
+// })
