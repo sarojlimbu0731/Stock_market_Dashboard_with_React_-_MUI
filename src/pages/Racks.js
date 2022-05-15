@@ -6,6 +6,11 @@ import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { Box } from '@mui/material';
+<<<<<<< HEAD
+=======
+import { Link} from 'react-router-dom';
+
+>>>>>>> f8b9522942d9ad744974dce4d48b920bee361050
 
 
 export default function Racks() {
@@ -16,6 +21,7 @@ export default function Racks() {
   const [open6, setOpen6] = React.useState(false);
   const [open7, setOpen7] = React.useState(false);
   const [open8, setOpen8] = React.useState(false);
+
 
 
   const handleClick1 = () => {
@@ -56,8 +62,6 @@ export default function Racks() {
   }
         
 
-
-
   
 
   return (
@@ -68,7 +72,8 @@ export default function Racks() {
       aria-labelledby="nested-list-subheader"
     >
       <ListItemButton>
-        <ListItemText primary="Dashboard" />
+     
+        <Link to="/layout/check"><ListItemText primary="Dashboard"/></Link>
       </ListItemButton>
 
       <ListItemButton   onClick={handleClick1}>
@@ -78,7 +83,8 @@ export default function Racks() {
             <Collapse in={open1} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Customer Profile" />
+                <Link to="/layout/display">       <ListItemText primary="Customer Profile" /></Link>
+           
                 </ListItemButton>
               </List>
             </Collapse>
@@ -183,7 +189,11 @@ export default function Racks() {
 
 
     </List>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b9522942d9ad744974dce4d48b920bee361050
     </Box>
+    
   );
 }
