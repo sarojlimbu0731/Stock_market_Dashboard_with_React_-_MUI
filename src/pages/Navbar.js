@@ -34,10 +34,11 @@ const Navbar = () => {
     <Box>
           {/* app bar */}
     
-    <AppBar position="sticky" elevation="0" className={classes.appbar}
+    <AppBar elevation="10" className={classes.appbar}
      sx={{
         backgroundColor:"#16003B",
         marginBottom:"1rem",
+        position:'fixed'
         
      }}
     >

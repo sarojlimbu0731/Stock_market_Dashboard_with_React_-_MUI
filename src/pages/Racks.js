@@ -10,6 +10,7 @@ import { Link} from 'react-router-dom';
 
 
 
+
 export default function Racks() {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
@@ -62,11 +63,17 @@ export default function Racks() {
   
 
   return (
-    <Box flex={2}>
+    <Box flex={2} sx={{ boxShadow:"4px 4px 3px 	#BEBEBE"}}>
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      sx={{ 
+        width: '17%',
+        bgcolor: 'background.paper',
+        position:'fixed',
+        display:'inline-block',
+        marginTop:'8rem'}}
       component="nav"
       aria-labelledby="nested-list-subheader"
+      
     >
       <ListItemButton>
      
