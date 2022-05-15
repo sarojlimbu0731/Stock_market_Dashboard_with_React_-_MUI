@@ -55,7 +55,7 @@ export default function SignIn() {
 
         clientData.map((client)=>{
             if(client.email===data.get('email') && client.password===data.get('password')){
-                navigate('/layout');
+                navigate('/');
             }
             else{
                 alert("email or password incorrect");

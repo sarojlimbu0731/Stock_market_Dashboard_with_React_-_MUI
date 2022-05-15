@@ -6,7 +6,7 @@ import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { Box } from '@mui/material';
-import { Link } from '@mui/material';
+
 
 export default function Racks() {
   const [open1, setOpen1] = React.useState(false);
@@ -183,9 +183,7 @@ export default function Racks() {
 
 
     </List>
-    <nav>
-      <Link href="/layout/check">check</Link>
-    </nav>
+
     </Box>
   );
 }

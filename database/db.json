@@ -6,6 +6,13 @@
       "lastName": "limbu",
       "email": "saroj@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": 32672,
+      "firstName": "saroj",
+      "lastName": "lim",
+      "email": "im@gmail.com",
+      "password": "12345"
     }
   ]
 }
