@@ -6,7 +6,6 @@ import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { Box } from '@mui/material';
-// import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function Racks() {
@@ -62,7 +61,7 @@ export default function Racks() {
   
 
   return (
-    <Box flex={2} sx={{boxShadow:'4px 4px 3px #BEBEBE'}}>
+    <Box flex={2} sx={{boxShadow:'4px 4px 3px #BEBEBE',height:"200vh"}}>
     <List
       sx={{ width:"19%",marginTop:"5rem", bgcolor: 'background.paper', position:"fixed"}}
       component="nav"

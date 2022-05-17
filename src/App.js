@@ -1,34 +1,7 @@
-// import './App.css';
-// import Layout from "./components/Layout";
-// import {BrowserRouter, Route, Routes}from 'react-router-dom';
-// import Display from './pages/Display';
-// import Check from './pages/Check';
-// import Dashboard from './pages/Dashboard';
-
-
-// function App() {
-//   return (
-
-//     <BrowserRouter>
-
-//         <Layout>
-//         <Routes>
-//         <Route exact path="/" element={<Dashboard/>}/>
-//         <Route path="/cprofile" element={<Check/>}/>
-//         </Routes>
-//         </Layout>
-         
- 
-//     </BrowserRouter>
-
-//   )
-// }
-
-// export default App;
-
 import './App.css';
 import Layout from "./pages/Layout";
 import {BrowserRouter, Route, Routes}from 'react-router-dom';
+
 
 import SignUp from './login/SignUp';
 import SignIn from './login/SignIn';
@@ -51,12 +24,27 @@ import MasterSetting from './pages/MasterSetting';
 import TransactionReport from './pages/TransactionReport';
 import FundReport from './pages/FundReport';
 
+//pagedetails
+import FundDepositDetail from './pagedetails/FundDepositDetail';
+import FundWithdrawerDetail from './pagedetails/FundWithdrawerDetail';
+
+//costum theme
+import { createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
+
+const theme=createTheme({
+  palette:{
+    
+  }
+})
+
 
 
 function App() {
   return (
     <BrowserRouter>
 
+      <ThemeProvider theme={theme}>
 
       <Routes>
         <Route path="/" element={<SignIn/>}/>
@@ -66,7 +54,13 @@ function App() {
         <Route  exact path="layout" element={<Layout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="cprofile" element={<CustomerProfile/>} />
-            <Route path="fmanagement" element={<FundManagement/>} />
+
+            <Route path="fmanagement" element={<FundManagement/>}/>
+            <Route path="funddeposit" element={<FundDepositDetail/>} />
+            <Route path="fundwithdraw" element={<FundWithdrawerDetail />} />
+       
+
+
             <Route path="bond" element={ <Bond/> } />
             <Route path="equity" element={<Equity/>} />
             <Route path="companyprofile" element={ <CompanyProfile />} />
@@ -84,6 +78,8 @@ function App() {
 
 
       </Routes>
+
+    </ThemeProvider>
 
     </BrowserRouter>
 
