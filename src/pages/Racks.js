@@ -6,8 +6,8 @@ import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { Box } from '@mui/material';
-import { Link} from 'react-router-dom';
-
+// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -20,6 +20,7 @@ export default function Racks() {
   const [open7, setOpen7] = React.useState(false);
   const [open8, setOpen8] = React.useState(false);
 
+  const navigate=useNavigate();
 
 
   const handleClick1 = () => {
@@ -63,7 +64,7 @@ export default function Racks() {
   
 
   return (
-    <Box flex={2} sx={{ boxShadow:"4px 4px 3px 	#BEBEBE"}}>
+    <Box flex={2} sx={{ boxShadow:"4px 4px 3px 	#BEBEBE", height:"150vh"}}>"
     <List
       sx={{ 
         width: '17%',
@@ -76,8 +77,9 @@ export default function Racks() {
       
     >
       <ListItemButton>
-     
-        <Link to="/layout/check"><ListItemText primary="Dashboard"/></Link>
+        {/* <Link to="/layout/dashboard"><ListItemText primary="Dashboard"/></Link> */}
+        <ListItemText primary="Dashboard" onClick={()=>(navigate("/layout/dashboard"))}/>
+
       </ListItemButton>
 
       <ListItemButton   onClick={handleClick1}>
@@ -87,14 +89,15 @@ export default function Racks() {
             <Collapse in={open1} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                <Link to="/layout/display">       <ListItemText primary="Customer Profile" /></Link>
-           
+                  {/* <Link to="/layout/cprofile"><ListItemText primary="Customer Profile" /></Link> */}
+                  <ListItemText primary="Customer Profile"  onClick={()=>(navigate("/layout/cprofile"))} />
                 </ListItemButton>
               </List>
             </Collapse>
 
       <ListItemButton>
-        <ListItemText primary="Fund Management" />
+        {/* <Link to="/layout/fmanagement"> <ListItemText primary="Fund Management" /></Link> */}
+        <ListItemText primary="Fund Management"  onClick={()=>(navigate("/layout/fmanagement"))} />
       </ListItemButton> 
 
       <ListItemButton onClick={handleClick2} >
@@ -104,10 +107,12 @@ export default function Racks() {
             <Collapse in={open2} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Bond" />
+                  {/* <Link to="/layout/bond"><ListItemText primary="Bond" /></Link> */}
+                  <ListItemText primary="Bond" onClick={()=>(navigate("/layout/bond"))}/>
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Equity" />
+                {/* <Link to="/layout/equity">  <ListItemText primary="Equity" /></Link>    */}
+                <ListItemText primary="Equity"  onClick={()=>(navigate("/layout/equity"))} />             
                 </ListItemButton>
               </List>
             </Collapse> 
@@ -119,13 +124,16 @@ export default function Racks() {
             <Collapse in={open3} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Company Profile" />
+                {/* <Link to="/layout/companyprofile">  <ListItemText primary="Company Profile" /></Link>    */}
+                <ListItemText primary="Company Profile"  onClick={()=>(navigate("/layout/companyprofile"))}/>             
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Securities Profile" />
+                {/* <Link to="/layout/securityprofile"><ListItemText primary="Securities Profile" /></Link>    */}
+                <ListItemText primary="Securities Profile" onClick={()=>(navigate("/layout/securityprofile"))} />               
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Securities Snap" />
+                {/* <Link to="/layout/securitysnap">  <ListItemText primary="Securities Snap" /></Link> */}
+                <ListItemText primary="Securities Snap" onClick={()=>(navigate("/layout/securitysnap"))} />                
                 </ListItemButton>
               </List>
             </Collapse>
@@ -137,10 +145,12 @@ export default function Racks() {
             <Collapse in={open4} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Add User" />
+                {/* <Link to="/layout/adduser"><ListItemText primary="Add User" /></Link>     */}
+                <ListItemText primary="Add User" onClick={()=>(navigate("/layout/adduser"))}/>              
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Users" />
+                {/* <Link to="/layout/users"><ListItemText primary="Users" /></Link>  */}
+                <ListItemText primary="Users" onClick={()=>(navigate("/layout/users"))} />                 
                 </ListItemButton>
               </List>
             </Collapse> 
@@ -152,10 +162,12 @@ export default function Racks() {
             <Collapse in={open6} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Country" />
+                {/* <Link to="/layout/country"> <ListItemText primary="Country" /></Link>    */}
+                <ListItemText primary="Country" onClick={()=>(navigate("/layout/country"))}/>              
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="City" />
+                {/* <Link to="/layout/city"> <ListItemText primary="City" /></Link>   */}
+                <ListItemText primary="City" onClick={()=>(navigate("/layout/city"))} />               
                 </ListItemButton>
               </List>
             </Collapse> 
@@ -167,10 +179,12 @@ export default function Racks() {
             <Collapse in={open7} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Service Charge" />
+                {/* <Link to="/layout/servicecharge">  <ListItemText primary="Service Charge" /></Link>  */}
+                <ListItemText primary="Service Charge" onClick={()=>(navigate("/layout/servicecharge"))}  />               
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Master Settings" />
+                {/* <Link to="/layout/mastersetting">  <ListItemText primary="Master Settings" /></Link>     */}
+                <ListItemText primary="Master Settings" onClick={()=>(navigate("/layout/mastersetting"))} />            
                 </ListItemButton>
               </List>
             </Collapse> 
@@ -183,10 +197,12 @@ export default function Racks() {
             <Collapse in={open8} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Transaction Report" />
+                {/* <Link to="/layout/transactionreport">  <ListItemText primary="Transaction Report" /></Link>     */}
+                <ListItemText primary="Transaction Report" onClick={()=>(navigate("/layout/transactionreport"))} />            
                 </ListItemButton>
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Fund Report" />
+                  {/* <Link to="/layout/fundreport"><ListItemText primary="Fund Report" /></Link> */}
+                  <ListItemText primary="Fund Report" onClick={()=>(navigate("/layout/fundreport"))}/>
                 </ListItemButton>
               </List>
             </Collapse> 
