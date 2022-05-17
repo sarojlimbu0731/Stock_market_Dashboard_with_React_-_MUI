@@ -63,21 +63,17 @@ export default function Racks() {
   
 
   return (
-    <Box flex={2} sx={{boxShadow:'4px 4px 3px #BEBEBE',height:"150vh"}}>
+    <Box flex={2} sx={{boxShadow:'4px 4px 3px #BEBEBE',height:"180vh"}}>
     <List
       sx={{ 
-        width: '17%',
+        width: '20%',
         bgcolor: 'background.paper',
-        position:'fixed',
-        display:'inline-block',
-        marginTop:'8rem'}}
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      
+         position:'fixed',
+        marginTop:'5rem'}}      
     >
       <ListItemButton>
         {/* <Link to="/layout/dashboard"><ListItemText primary="Dashboard"/></Link> */}
-        <ListItemText primary="Dashboard" onClick={()=>(navigate("/layout/dashboard"))}/>
+        <ListItemText  primary="Dashboard" onClick={()=>(navigate("/layout/dashboard"))}/>
 
       </ListItemButton>
 

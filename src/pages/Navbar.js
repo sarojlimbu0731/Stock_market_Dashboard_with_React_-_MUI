@@ -6,6 +6,7 @@ import NotificationsNoneRoundedIcon from '@mui/icons-material/NotificationsNoneR
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
 import { Menu,MenuItem } from '@mui/material';
+import logo from '../Images/logo.jpg';
 
 
 
@@ -48,7 +49,7 @@ const Navbar = () => {
             <Typography
                 className={classes.logo}
             >
-                LOGO
+                <img src={logo} />
             </Typography>  
                 <Button startIcon={<NotificationsNoneRoundedIcon/>} variant='outline'>Notification</Button> 
             
