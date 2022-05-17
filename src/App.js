@@ -1,6 +1,7 @@
 import './App.css';
 import Layout from "./pages/Layout";
 import {BrowserRouter, Route, Routes}from 'react-router-dom';
+
 import SignUp from './login/SignUp';
 import SignIn from './login/SignIn';
 import Dashboard from './pages/Dashboard';
@@ -21,12 +22,27 @@ import TransactionReport from './pages/TransactionReport';
 import FundReport from './pages/FundReport';
 import CustomerView from './pagedetails/customerView';
 
+//pagedetails
+import FundDepositDetail from './pagedetails/FundDepositDetail';
+import FundWithdrawerDetail from './pagedetails/FundWithdrawerDetail';
+
+//costum theme
+import { createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
+
+const theme=createTheme({
+  palette:{
+    
+  }
+})
+
 
 
 function App() {
   return (
     <BrowserRouter>
 
+      <ThemeProvider theme={theme}>
 
       <Routes>
         <Route path="/" element={<SignIn/>}/>
@@ -37,7 +53,12 @@ function App() {
             <Route path="cprofile" element={<CustomerProfile/>} />
             <Route path="cview" element={<CustomerView/>} />
             
-            <Route path="fmanagement" element={<FundManagement/>} />
+            <Route path="fmanagement" element={<FundManagement/>}/>
+            <Route path="funddeposit" element={<FundDepositDetail/>} />
+            <Route path="fundwithdraw" element={<FundWithdrawerDetail />} />
+       
+
+
             <Route path="bond" element={ <Bond/> } />
             <Route path="equity" element={<Equity/>} />
             <Route path="companyprofile" element={ <CompanyProfile />} />
@@ -55,6 +76,8 @@ function App() {
 
 
       </Routes>
+
+    </ThemeProvider>
 
     </BrowserRouter>
 

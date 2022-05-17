@@ -3,8 +3,8 @@
 // export const theme= createTheme({
 //     palatte:{
 //         primary:{
-//             main:"",
-//             primary:""
+//             main:"white",
+            
 //         }
 //     }
 // })
